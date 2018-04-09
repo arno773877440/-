@@ -1,0 +1,148 @@
+
+
+
+78K/0 Series Linker W4.30                     Date: 5 Jan 2018 Page:   1
+
+Command:   -yD:\Program Files (x86)\Renesas Electronics\CubeSuite+\Devic
+           e\78K0\Devicefile -_msgoff -oDefaultBuild\test.lmf -gi0ffffff
+           ffffffffffffffh -go256 -gb0000000003H -s -pDefaultBuild\test.
+           map D:\Program Files (x86)\Renesas Electronics\CubeSuite+\CA7
+           8K0\V1.30\lib78K0\s0l.rel DefaultBuild\201502401146.rel -bcl0
+           .lib -bcl0f.lib -iD:\Program Files (x86)\Renesas Electronics\
+           CubeSuite+\CA78K0\V1.30\lib78K0
+Para-file:
+Out-file:  DefaultBuild\test.lmf
+Map-file:  DefaultBuild\test.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    17 output segment(s)
+  42DH byte(s) real data
+   201 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=0000H    SIZE=F000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     0000H     0002H   CSEG AT
+                  @@VECT00 @cstart    0000H     0002H
+         @@CALT                       0002H     0000H   CSEG
+                  @@CALT   @cstart    0002H     0000H
+                  @@CALT   201502401146
+                                      0002H     0000H
+         @@CALF                       0002H     0000H   CSEG
+                  @@CALF   @cstart    0002H     0000H
+                  @@CALF   201502401146
+                                      0002H     0000H
+* gap (Not Free Area) *               0002H     0002H
+* gap *                               0004H     0028H
+         @@VECT2C                     002CH     0002H   CSEG AT
+                  @@VECT2C 201502401146
+                                      002CH     0002H
+* gap *                               002EH     0052H
+         ?CSEGOB0                     0080H     0005H   CSEG OPT_BYTE
+         @@R_INIS                     0085H     0000H   CSEG UNITP
+                  @@R_INIS @cstart    0085H     0000H
+                  @@R_INIS 201502401146
+                                      0085H     0000H
+                  @@R_INIS @rom       0085H     0000H
+         @@CNST                       0085H     0000H   CSEG UNITP
+                  @@CNST   @cstart    0085H     0000H
+                  @@CNST   201502401146
+                                      0085H     0000H
+         ?CSEGSI                      0085H     000AH   CSEG
+* gap (Not Free Area) *               008FH     0101H
+         @@R_INIT                     0190H     0008H   CSEG UNITP
+                  @@R_INIT @cstart    0190H     0000H
+                  @@R_INIT 201502401146
+
+
+
+78K/0 Series Linker W4.30                     Date: 5 Jan 2018 Page:   2
+
+                                      0190H     0008H
+                  @@R_INIT @rom       0198H     0000H
+         @@LCODE                      0198H     01AEH   CSEG
+                  @@LCODE  @cstart    0198H     0076H
+                  @@LCODE  @isrem     020EH     002DH
+                  @@LCODE  @iurem     023BH     0038H
+                  @@LCODE  @iscmp     0273H     0017H
+                  @@LCODE  @hdwinit   028AH     0001H
+                  @@LCODE  exit       028BH     0024H
+                  @@LCODE  rand       02AFH     0048H
+                  @@LCODE  @lumul     02F7H     004FH
+         @@CODE                       0346H     0264H   CSEG
+                  @@CODE   201502401146
+                                      0346H     0264H
+* gap *                               05AAH     EA56H
+
+  MEMORY=IXRAM
+  BASE ADDRESS=F400H    SIZE=0400H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               F400H     0400H
+
+  MEMORY=LRAM
+  BASE ADDRESS=FA00H    SIZE=0020H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA00H     0020H
+
+  MEMORY=DSPRAM
+  BASE ADDRESS=FA40H    SIZE=0028H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA40H     0028H
+
+  MEMORY=RAM
+  BASE ADDRESS=FB00H    SIZE=0500H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FB00H     007AH   DSEG UNITP
+                  @@DATA   @cstart    FB00H     0078H
+                  @@DATA   201502401146
+                                      FB78H     0002H
+                  @@DATA   @rom       FB7AH     0000H
+         @@INIT                       FB7AH     0008H   DSEG UNITP
+                  @@INIT   @cstart    FB7AH     0000H
+                  @@INIT   201502401146
+                                      FB7AH     0008H
+                  @@INIT   @rom       FB82H     0000H
+         @@INIS                       FB82H     0000H   DSEG UNITP
+                  @@INIS   @cstart    FB82H     0000H
+                  @@INIS   201502401146
+                                      FB82H     0000H
+                  @@INIS   @rom       FB82H     0000H
+         @@DATS                       FB82H     0000H   DSEG UNITP
+                  @@DATS   @cstart    FB82H     0000H
+                  @@DATS   201502401146
+                                      FB82H     0000H
+                  @@DATS   @rom       FB82H     0000H
+         @@BITS                       FB82H     0000H   BSEG
+                  @@BITS   @cstart    FB82H.0   0000H.0
+                  @@BITS   201502401146
+
+
+
+78K/0 Series Linker W4.30                     Date: 5 Jan 2018 Page:   3
+
+                                      FB82H.0   0000H.0
+* gap *                               FB82H     0336H
+         @@RTARG0                     FEB8H     0008H   DSEG AT
+                  @@RTARG0 @RTARG0    FEB8H     0008H
+* gap *                               FEC0H     0040H
+* gap (Not Free Area) *               FF00H     0100H
+
+
+ Target chip : uPD78F0485
+ Device file : V1.12
+

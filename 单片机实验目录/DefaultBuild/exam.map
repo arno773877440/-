@@ -1,0 +1,97 @@
+
+
+
+78K/0 Series Linker W4.30                     Date: 4 Nov 2017 Page:   1
+
+Command:   -yD:\Program Files (x86)\Renesas Electronics\CubeSuite+\Devic
+           e\78K0\Devicefile -_msgoff -oDefaultBuild\exam.lmf -gi0ffffff
+           ffffffffffffffh -go256 -gb0000000003H -pDefaultBuild\exam.map
+            DefaultBuild\test.rel -bcl0.lib -bcl0f.lib -iD:\Program File
+           s (x86)\Renesas Electronics\CubeSuite+\CA78K0\V1.30\lib78K0
+Para-file:
+Out-file:  DefaultBuild\exam.lmf
+Map-file:  DefaultBuild\exam.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    13 output segment(s)
+   A5H byte(s) real data
+    53 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=0000H    SIZE=F000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@CALT                       0000H     0000H   CSEG
+                  @@CALT   test       0000H     0000H
+         @@CALF                       0000H     0000H   CSEG
+                  @@CALF   test       0000H     0000H
+* gap *                               0000H     0002H
+* gap (Not Free Area) *               0002H     0002H
+* gap *                               0004H     007CH
+         ?CSEGOB0                     0080H     0005H   CSEG OPT_BYTE
+         @@CNST                       0085H     0000H   CSEG UNITP
+                  @@CNST   test       0085H     0000H
+         @@R_INIT                     0085H     0000H   CSEG UNITP
+                  @@R_INIT test       0085H     0000H
+         @@R_INIS                     0085H     0000H   CSEG UNITP
+                  @@R_INIS test       0085H     0000H
+         ?CSEGSI                      0085H     000AH   CSEG
+* gap (Not Free Area) *               008FH     0101H
+         @@CODE                       0190H     0096H   CSEG
+                  @@CODE   test       0190H     0096H
+* gap *                               0226H     EDDAH
+
+  MEMORY=IXRAM
+  BASE ADDRESS=F400H    SIZE=0400H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               F400H     0400H
+
+  MEMORY=LRAM
+  BASE ADDRESS=FA00H    SIZE=0020H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA00H     0020H
+
+  MEMORY=DSPRAM
+
+
+
+78K/0 Series Linker W4.30                     Date: 4 Nov 2017 Page:   2
+
+  BASE ADDRESS=FA40H    SIZE=0028H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA40H     0028H
+
+  MEMORY=RAM
+  BASE ADDRESS=FB00H    SIZE=0500H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@INIT                       FB00H     0000H   DSEG UNITP
+                  @@INIT   test       FB00H     0000H
+         @@DATA                       FB00H     0000H   DSEG UNITP
+                  @@DATA   test       FB00H     0000H
+         @@INIS                       FB00H     0000H   DSEG UNITP
+                  @@INIS   test       FB00H     0000H
+         @@DATS                       FB00H     0000H   DSEG UNITP
+                  @@DATS   test       FB00H     0000H
+         @@BITS                       FB00H     0000H   BSEG
+                  @@BITS   test       FB00H.0   0000H.0
+* gap *                               FB00H     0400H
+* gap (Not Free Area) *               FF00H     0100H
+
+
+ Target chip : uPD78F0485
+ Device file : V1.12
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+ls -al
+filenum =0
+dirnum = 0
+for q in 'ls -a'
+do
+for [ -d $q ]
+then
+dirnum='expr $dirnum +1'
+fi
+filename='expr $filenum + 1'
+done
+echo "The number of dirctary is $dirnum"
+echo "The number of file is $filenam"

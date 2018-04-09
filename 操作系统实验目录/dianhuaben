@@ -1,0 +1,35 @@
+#!/bin/bash
+if [! -f /root/minda ]
+then
+touch /root/minda
+fi
+while true
+echo "If you want to add a user please type ........a"
+echo "If you want to del a user please type ........d"
+echo "If you want to watch all users please type ...l"
+echo "If you want to binji user please type ........e"
+echo "If you want to exit please type ..............q"
+read b
+do
+case $b in
+a) echo "Please type your name :"
+read name
+echo "Please type your number :"
+read number
+echo $name $number >> /root/minda;;
+d) echo "Please type which name do you want to del:"
+read name
+cat /root/minda | grep ^ [^$name] > /root/minda ;;
+
+l) cat /root/minda ;;
+e) echo "Please type which name do you want to edit : "
+read name
+cat /root/minda | grep ^ [^$name] > /root/minda
+echo "Please type your new name :"
+read name
+echo "Please type your new number :"
+read number
+echo $name $number >> /root/minda ;;
+q) exit ;;
+esac
+done

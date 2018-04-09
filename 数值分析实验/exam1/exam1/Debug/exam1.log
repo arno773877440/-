@@ -1,0 +1,23 @@
+﻿生成启动时间为 2018/1/7 13:58:22。
+     1>项目“E:\math_demo\exam1\exam1\exam1.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt exam8.c
+         exam8.c
+     1>e:\math_demo\exam1\exam1\exam8.c(6): warning C4101: “ch2”: 未引用的局部变量
+     1>e:\math_demo\exam1\exam1\exam8.c(6): warning C4101: “ch3”: 未引用的局部变量
+     1>e:\math_demo\exam1\exam1\exam8.c(6): warning C4101: “ch1”: 未引用的局部变量
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\math_demo\exam1\Debug\exam1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\math_demo\exam1\Debug\exam1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\math_demo\exam1\Debug\exam1.lib" /MACHINE:X86 Debug\exam1.obj
+         Debug\exam2.obj
+         Debug\exam3.obj
+         Debug\exam4.obj
+         Debug\exam5.obj
+         Debug\exam6.obj
+         Debug\exam7.obj
+         Debug\exam8.obj
+         exam1.vcxproj -> E:\math_demo\exam1\Debug\exam1.exe
+     1>已完成生成项目“E:\math_demo\exam1\exam1\exam1.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:01.15

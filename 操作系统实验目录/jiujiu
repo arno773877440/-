@@ -1,0 +1,10 @@
+#!/bin/bash
+for ((i = 1;i<=10;i++))
+do
+for ((p = 1;p<=i;p++))
+do
+echo -ne "  $p * $i = " `expr $p \* $i`
+done
+echo
+done
+echo

@@ -1,0 +1,120 @@
+
+
+
+78K/0 Series Linker W4.30                     Date: 9 Dec 2017 Page:   1
+
+Command:   -yE:\Program Files (x86)\Renesas Electronics\CubeSuite+\Devic
+           e\78K0\Devicefile -_msgoff -oDefaultBuild\33333.lmf -gi0fffff
+           fffffffffffffffh -go256 -gb0000000003H -s -pDefaultBuild\3333
+           3.map E:\Program Files (x86)\Renesas Electronics\CubeSuite+\C
+           A78K0\V1.30\lib78K0\s0l.rel DefaultBuild\exam4.rel -bcl0.lib 
+           -bcl0f.lib -iE:\Program Files (x86)\Renesas Electronics\CubeS
+           uite+\CA78K0\V1.30\lib78K0
+Para-file:
+Out-file:  DefaultBuild\33333.lmf
+Map-file:  DefaultBuild\33333.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    15 output segment(s)
+  248H byte(s) real data
+   144 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=0000H    SIZE=F000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     0000H     0002H   CSEG AT
+                  @@VECT00 @cstart    0000H     0002H
+         @@CALT                       0002H     0000H   CSEG
+                  @@CALT   @cstart    0002H     0000H
+                  @@CALT   exam4      0002H     0000H
+         @@CALF                       0002H     0000H   CSEG
+                  @@CALF   @cstart    0002H     0000H
+                  @@CALF   exam4      0002H     0000H
+* gap (Not Free Area) *               0002H     0002H
+* gap *                               0004H     007CH
+         ?CSEGOB0                     0080H     0005H   CSEG OPT_BYTE
+         @@R_INIS                     0085H     0000H   CSEG UNITP
+                  @@R_INIS @cstart    0085H     0000H
+                  @@R_INIS exam4      0085H     0000H
+                  @@R_INIS @rom       0085H     0000H
+         @@CNST                       0085H     0000H   CSEG UNITP
+                  @@CNST   @cstart    0085H     0000H
+                  @@CNST   exam4      0085H     0000H
+         ?CSEGSI                      0085H     000AH   CSEG
+* gap (Not Free Area) *               008FH     0101H
+         @@R_INIT                     0190H     0028H   CSEG UNITP
+                  @@R_INIT @cstart    0190H     0000H
+                  @@R_INIT exam4      0190H     0028H
+                  @@R_INIT @rom       01B8H     0000H
+         @@LCODE                      01B8H     009BH   CSEG
+                  @@LCODE  @cstart    01B8H     0076H
+                  @@LCODE  @hdwinit   022EH     0001H
+                  @@LCODE  exit       022FH     0024H
+         @@CODE                       0253H     0174H   CSEG
+                  @@CODE   exam4      0253H     0174H
+* gap *                               03C7H     EC39H
+
+
+
+78K/0 Series Linker W4.30                     Date: 9 Dec 2017 Page:   2
+
+
+  MEMORY=IXRAM
+  BASE ADDRESS=F400H    SIZE=0400H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               F400H     0400H
+
+  MEMORY=LRAM
+  BASE ADDRESS=FA00H    SIZE=0020H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA00H     0020H
+
+  MEMORY=DSPRAM
+  BASE ADDRESS=FA40H    SIZE=0028H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA40H     0028H
+
+  MEMORY=RAM
+  BASE ADDRESS=FB00H    SIZE=0500H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FB00H     0078H   DSEG UNITP
+                  @@DATA   @cstart    FB00H     0078H
+                  @@DATA   exam4      FB78H     0000H
+                  @@DATA   @rom       FB78H     0000H
+         @@INIT                       FB78H     0028H   DSEG UNITP
+                  @@INIT   @cstart    FB78H     0000H
+                  @@INIT   exam4      FB78H     0028H
+                  @@INIT   @rom       FBA0H     0000H
+         @@INIS                       FBA0H     0000H   DSEG UNITP
+                  @@INIS   @cstart    FBA0H     0000H
+                  @@INIS   exam4      FBA0H     0000H
+                  @@INIS   @rom       FBA0H     0000H
+         @@DATS                       FBA0H     0000H   DSEG UNITP
+                  @@DATS   @cstart    FBA0H     0000H
+                  @@DATS   exam4      FBA0H     0000H
+                  @@DATS   @rom       FBA0H     0000H
+         @@BITS                       FBA0H     0000H   BSEG
+                  @@BITS   @cstart    FBA0H.0   0000H.0
+                  @@BITS   exam4      FBA0H.0   0000H.0
+* gap *                               FBA0H     0360H
+* gap (Not Free Area) *               FF00H     0100H
+
+
+ Target chip : uPD78F0485
+ Device file : V1.12
+

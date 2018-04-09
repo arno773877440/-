@@ -1,0 +1,28 @@
+#!/bin/bash
+s = 0
+while true
+echo ".........+"
+echo ".........-"
+echo "........./"
+echo ".........q"
+echo "Please type your word:(e.g.1+2)"
+read a b c
+do
+case $b in
++)
+let s = a+c
+echo "$a + $c = $s";;
+-)
+let s = a-c
+echo "$a - $c = $s";;
+*)
+let s = a*c
+echo "$a * $c = $s";;
+q)
+let s = a/c
+echo "$a / $c = $s";;
+esac
+case $a in
+q) break ;;
+esac
+done

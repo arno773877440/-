@@ -1,0 +1,35 @@
+#!/bin/bash
+n = 1
+while [$n -gt 0 ]
+do
+echo "xinjian----------1"
+echo "denglu-----------2"
+echo "exit-------------3"
+read n;
+case $n in
+1) echo "uesrname"
+read name
+if [ -f $name ]
+then
+echo "same uesrname"
+else
+touch /root/$name
+echo "passwd"
+read passwd
+echo $passwd >> /root/$name
+fi;;
+echo "passwd"
+else
+echo "yonghu wrong"
+fi
+read pass wd1
+if($passwd1 -eq 'cat /root/$name1' )
+then 
+echo "success"
+break
+else
+echo "passwd wrong"
+fi ;;
+3) break;;
+esac
+done

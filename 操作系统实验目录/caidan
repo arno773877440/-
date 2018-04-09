@@ -1,0 +1,26 @@
+#!/bin/bash
+while true
+echo "List Directory.........l"
+echo "Change Dirctory........c"
+echo "Edit File..............e"
+echo "Remove File............r"
+echo "Exit Menu..............q"
+read ch
+do
+case $ch in
+l) ls;;
+c) echo Enter target directory
+read direc
+cd "$direc" ;;
+e) echo Enter file name
+read file
+vi $file ;;
+r) echo Enter file name
+read file
+rm $file ;;
+q|Q) echo GoodBye
+break;;
+*) echo illegal Option
+esac
+done
+
